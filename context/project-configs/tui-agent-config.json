@@ -1,0 +1,17 @@
+{
+  "default_provider": "anthropic",
+  "default_model": "claude-opus-4-6",
+  "provider": "anthropic",
+  "model": "claude-opus-4-6",
+  "max_tokens": 8192,
+  "max_iterations": 50,
+  "temperature": 0.0,
+  "auto_approve": false,
+  "auto_approve_reads": true,
+  "auto_approve_writes": false,
+  "auto_approve_bash": false,
+  "theme": "dark",
+  "show_sidebar": true,
+  "ANTHROPIC_BASE_URL": "https://api.zstack.ai",
+  "ANTHROPIC_API_KEY": "sk-REDACTED"
+}
