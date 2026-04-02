@@ -8,6 +8,41 @@
 > 系统工程挑战——它同时考验框架的 LLM 抽象层、工具系统、流式输出、状态管理、终端交互和可扩展性。
 
 ---
+
+## 📁 仓库结构
+
+```
+CCByWhat/
+├── README.md                              # CC-Bench 完整评测框架（本文件）
+├── comparisons/                           # 各框架 vs CC 详细对比
+│   ├── agentscope-vs-cc.md                #   AgentScope vs Claude Code
+│   ├── langchain-vs-cc.md                 #   LangChain vs Claude Code
+│   └── langgraph-vs-cc.md                 #   LangGraph vs Claude Code
+├── sessions/                              # 完整 Claude Code 对话记录
+│   ├── SESSION-GUIDE.md                   #   会话说明
+│   ├── session-main-8894f1cb.jsonl        #   主会话 (4MB) — 构建两个 TUI Agent
+│   ├── session-prev-6d3e77a1.jsonl        #   前序会话 (1.2MB) — AgentScope 项目
+│   └── session-today-23e15e3d.jsonl       #   辅助会话 — 环境配置
+├── context/                               # 评估时 CC 的完整上下文环境
+│   ├── CONTEXT-GUIDE.md                   #   上下文说明
+│   ├── claude-code-config/                #   Claude Code 自身配置
+│   │   ├── settings.json                  #     ~/.claude/settings.json (key 已脱敏)
+│   │   └── CLAUDE.md                      #     全局 CLAUDE.md
+│   ├── project-configs/                   #   被评估项目的配置
+│   │   └── tui-agent-config.json          #     ~/.tui-agent/config.json (key 已脱敏)
+│   ├── reference-docs/                    #   参考文档
+│   │   ├── agentscope-internal-summary.md #     AgentScope 内部痛点分析
+│   │   ├── agentscope-code-README.md      #     AgentScope-Code 项目 README
+│   │   ├── tui-agent-langchain-README.md  #     LangChain 版 README
+│   │   └── tui-agent-langgraph-README.md  #     LangGraph 版 README
+│   └── source-samples/                    #   关键源码样本
+│       ├── langchain/                     #     LangChain 版: app.py, agent_core.py, mcp_client.py, skills_registry.py, config.py
+│       └── langgraph/                     #     LangGraph 版: app.py, graph_agent.py, graph_nodes.py, graph_state.py, config.py
+└── .gitignore
+```
+
+---
+
 ## 一、立意：为什么 CC 复刻是一个好 Benchmark
 
 ### 1.1 传统 Agent Benchmark 的局限
