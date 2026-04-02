@@ -25,11 +25,6 @@ CCByWhat/
 │   └── session-today-23e15e3d.jsonl       #   辅助会话 — 环境配置
 ├── context/                               # 评估时 CC 的完整上下文环境
 │   ├── CONTEXT-GUIDE.md                   #   上下文说明
-│   ├── claude-code-config/                #   Claude Code 自身配置
-│   │   ├── settings.json                  #     ~/.claude/settings.json (key 已脱敏)
-│   │   └── CLAUDE.md                      #     全局 CLAUDE.md
-│   ├── project-configs/                   #   被评估项目的配置
-│   │   └── tui-agent-config.json          #     ~/.tui-agent/config.json (key 已脱敏)
 │   ├── reference-docs/                    #   参考文档
 │   │   ├── agentscope-internal-summary.md #     AgentScope 内部痛点分析
 │   │   ├── agentscope-code-README.md      #     AgentScope-Code 项目 README
